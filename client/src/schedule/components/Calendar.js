@@ -1,7 +1,7 @@
 import React, { useState }  from 'react';
 import { render } from 'react-dom';
 import Calendar from 'react-calendar';
-
+import Card from '../../components/UIElements/Card';
 import './Calendar.css'
 
 const SCalendar = () => {
@@ -14,11 +14,16 @@ const SCalendar = () => {
 
     return(
         <>
+        <Card>
         <div classname="calendar">
-            <Calendar onChange={onChange} value={date} />
+            <Calendar showWeekNumbers onChange={onChange} value={date} />
+            {console.log(date)}
+            <h3>{date.toString()} </h3>
         </div>
+        </Card>
         </>
     )
 }
+render(<SCalendar />, document.querySelector("#root"));
 
 export default SCalendar;
