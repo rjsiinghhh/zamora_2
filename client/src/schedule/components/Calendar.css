@@ -6,3 +6,83 @@ body {
     background: white;
   } 
   
+  .react-calendar__navigation__label {
+        font: inherit;
+        padding: 0.5rem 1.5rem;
+        border: 1px solid #663f3f;
+        border-radius: 4px;
+        background: #222831;
+        color: white;
+        cursor: pointer;
+        margin-right: 1rem;
+        text-decoration: none;
+        display: inline-block;
+      }
+  
+   .react-calendar__navigation__arrow{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #222831;
+    border-radius: 4px;
+    background: #222831;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+   
+   
+   
+   .react-calendar__navigation__next-button{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #222831;
+    border-radius: 4px;
+    background: #bce6eb;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+
+.react-calendar__navigation__arrow {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #222831;
+    border-radius: 4px;
+    background: #bce6eb;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+.react-calendar__viewContainer{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #222831;
+    border-radius: 4px;
+    background: #222831;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .react-calendar__month-view{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #222831;
+    border-radius: 4px;
+    background: #222831;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+  }
