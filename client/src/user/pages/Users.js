@@ -8,8 +8,8 @@ const Users = () => {
       id: 'u1',
       name: 'RJ Singh',
       image:
-        '',
-      places: 1
+        'https://i.imgur.com/6MapaId.png',
+      property: 1
     }
   ];
 
