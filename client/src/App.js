@@ -10,6 +10,7 @@ import Users from './user/pages/Users';
 import UserPlaces from './places/pages/UserPlaces';
 import MainNavigation from './components/Navigation/MainNavigation';
 import Expenses from './finance/pages/Expenses'
+import Schedule from './schedule/pages/Schedule'
 
 const App = () => {
   return (
@@ -26,6 +27,9 @@ const App = () => {
           <Route path="/expenses" exact>
             <Expenses />
           </Route>
+          <Route path="/schedule" exact>
+            <Schedule />
+          </Route>
           <Redirect to="/" />
         </Switch>
       </main>
@@ -34,3 +38,9 @@ const App = () => {
 };
 
 export default App;
+
+
+
+// need to grab a new api key for the map
+// d3, bootstrap table
+// get the todo section in there 
