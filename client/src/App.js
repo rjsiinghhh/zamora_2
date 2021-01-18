@@ -9,6 +9,7 @@ import {
 import Users from './user/pages/Users';
 import UserPlaces from './places/pages/UserPlaces';
 import MainNavigation from './components/Navigation/MainNavigation';
+import Expenses from './finance/pages/Expenses'
 
 const App = () => {
   return (
@@ -21,6 +22,9 @@ const App = () => {
           </Route>
           <Route path="/:userId/places" exact>
             <UserPlaces />
+          </Route>
+          <Route path="/expenses" exact>
+            <Expenses />
           </Route>
           <Redirect to="/" />
         </Switch>
