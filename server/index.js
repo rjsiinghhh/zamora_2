@@ -10,9 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 
-// Routes
 
-// create a todo for schdueling 
 
 app.post("/schedule", async (req, res) => {
     try {
