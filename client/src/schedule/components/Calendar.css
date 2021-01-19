@@ -74,15 +74,31 @@ body {
     display: inline-block;
   }
 
-  .react-calendar__month-view{
+  .react-calendar__month-view button{
     font: inherit;
     padding: 0.5rem 1.5rem;
     border: 1px solid #663f3f;
     border-radius: 4px;
-    background: #1a508b;
+    background: #bce6eb;
     color: white;
     cursor: pointer;
     margin-right: 1rem;
     text-decoration: none;
     display: inline-block;
+  }
+
+
+   .react-calendar__month-view react-calendar__month-view--weekNumbers{
+    
+      font: inherit;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid #663f3f;
+      border-radius: 4px;
+      background: #eff8ff;
+      color: white;
+      cursor: pointer;
+      margin-right: 1rem;
+      text-decoration: none;
+      display: inline-block;
+    
   }
