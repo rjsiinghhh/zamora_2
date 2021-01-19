@@ -14,7 +14,7 @@ app.use(express.json());
 
 // create a todo for schdueling 
 
-app.post("/daily", async (req, res) => {
+app.post("/schedule", async (req, res) => {
     try {
         const { date } = req.body;
         const { description } = req.body;
@@ -30,7 +30,7 @@ app.post("/daily", async (req, res) => {
 
 //get all todos
 
-app.get("/todos", async (req, res) => {
+app.get("/schedule", async (req, res) => {
     try {
       const allTodos = await pool.query("SELECT * FROM todo");
       res.json(allTodos.rows);
@@ -42,7 +42,7 @@ app.get("/todos", async (req, res) => {
 
   // get a todo
 
-  app.get("/daily/:id", async(req, res) => {
+  app.get("/schedule/:id", async(req, res) => {
       try {
           const { id } = req.params;
           const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1" , [
@@ -56,7 +56,7 @@ app.get("/todos", async (req, res) => {
 
   // update a todo 
 
-  app.put("/daily/:id", async (req, res) => {
+  app.put("/schedule/:id", async (req, res) => {
       try {
           const { id } = req.params;
           const { description } = req.params;
@@ -72,7 +72,7 @@ app.get("/todos", async (req, res) => {
 
   // delete a todo 
 
-  app.delete("/todos/:id", async (req, res) => {
+  app.delete("/schedule/:id", async (req, res) => {
     try {
       const { id } = req.params;
       const deleteTodo = await pool.query("DELETE FROM todo WHERE todo_id = $1", [

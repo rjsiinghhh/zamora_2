@@ -2,15 +2,15 @@ import React from 'react';
 
 
 import './Schedule.css';
-import SCalendar from '../components/Calendar'
+import SCalendar from '../components/Calendar';
+import InputTodo from '../components/AddTodo';
+import ListTodo from '../components/ListTodo';
 
 const Schedule = props => {
     return(
         <>
-        
-        <h1> Schedule type stuff here</h1>
-        <h3>will call to the api i built in the backend DATE and DESCRIPTION</h3>
         <SCalendar />
+       
         </>
     )
 }

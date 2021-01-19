@@ -32,7 +32,7 @@ const SCalendar = () => {
                     footer={<Button onClick={closeCalendarHandler}>CLOSE</Button>}
                   >
                     <div className="calendar-container">
-                      <Calendar showWeekNumbers onChange={onChange} value={date} />
+                      <Calendar onChange={onChange} value={date} />
                     </div>
                   </Modal>
                   <li className="place-item">
@@ -63,38 +63,3 @@ const SCalendar = () => {
 
 
 
-
-
-
-
-
-//   return (
-//     <React.Fragment>
-//       <Modal
-//         show={showCalendar}
-//         onCancel={closeCalendarHandler}
-//         contentClass="place-item__modal-content"
-//         footerClass="place-item__modal-actions"
-//         footer={<Button onClick={closeMapHandler}>CLOSE</Button>}
-//       >
-//         <div className="calendar-container">
-//           <Calendar showWeekNumbers onChange={onChange} value={date} />
-//         </div>
-//       </Modal>
-//       <li className="place-item">
-//         <Card className="place-item__content">
-//           <div className="place-item__info">
-// {console.log(date)}
-// <h3>{date.toString()} </h3>
-//            
-//           </div>
-//           <div className="place-item__actions">
-//             <Button inverse onClick={openCalendarHandler}>VIEW ON MAP</Button>
-//           </div>
-//         </Card>
-//       </li>
-//     </React.Fragment>
-//   );
-// };
-
-// export default SCalendar;
