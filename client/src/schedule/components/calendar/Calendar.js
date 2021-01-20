@@ -13,11 +13,8 @@ const SCalendar = () => {
     const [date, setDate] = useState(new Date());
 
     const [showCalendar, setShowCalendar] = useState(false);
-
      const openCalendarHandler = () => setShowCalendar(true);
-    
     const closeCalendarHandler = () => setShowCalendar(false);
-
     const onChange = date => {
         setDate(date)
     }

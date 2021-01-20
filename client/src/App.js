@@ -39,8 +39,3 @@ const App = () => {
 
 export default App;
 
-
-
-// need to grab a new api key for the map
-// d3, bootstrap table
-// get the todo section in there 

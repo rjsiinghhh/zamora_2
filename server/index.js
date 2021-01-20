@@ -10,8 +10,6 @@ app.use(cors());
 app.use(express.json());
 
 
-
-
 app.post("/schedule", async (req, res) => {
     try {
         const { date } = req.body;
@@ -37,7 +35,6 @@ app.get("/schedule", async (req, res) => {
     }
   });
 
-
   // get a todo
 
   app.get("/schedule/:id", async(req, res) => {
@@ -51,7 +48,7 @@ app.get("/schedule", async (req, res) => {
           console.error(err.message);
       }
   });
-
+  
   // update a todo 
 
   app.put("/schedule/:id", async (req, res) => {

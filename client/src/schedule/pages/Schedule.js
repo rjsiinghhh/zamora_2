@@ -1,14 +1,16 @@
-import React from 'react';
-
-
+import React, { Fragment } from 'react';
 import './Schedule.css';
-import SCalendar from '../components/Calendar';
-
+import AddSchedule from '../components/schedule/AddSchedule'
+import Timeline from '../components/timeline/Timeline'
 
 const Schedule = props => {
     return(
         <>
-        <SCalendar />
+        <Fragment>
+        
+        <AddSchedule />
+        <Timeline />
+        </Fragment>
        
         </>
     )
