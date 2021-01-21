@@ -1,63 +1,58 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { ReactComponent as WorkIcon } from "./work.svg";
 import { ReactComponent as SchoolIcon } from "./school.svg";
 import timelineElements from "./timelineElements";
+import Icon from './Icon';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+import './Timeline.css'
 
-function Timeline() {
-  let workIconStyles = { background: "#d2f6c5" };
-  let schoolIconStyles = { background: "#f9c74f" };
+const ListTodo = () => {
+    let workIconStyles = { background: "#d2f6c5" };
+    let schoolIconStyles = { background: "#f9c74f" };
 
+    const [todos, setTodos] = useState([]);
+    const getAllTodos = async () => {
+        try {
+            const response = await axios.get("http://localhost:5000/schedule");
+            const data = response.data;
+            setTodos(data);
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+    const deleteTodo = async (deleteId) => {
+        try {
+            await axios.delete(`http://localhost:5000/schedule/${deleteId}`);
+            setTodos(todos.filter(todo => todo.todo_id !== deleteId));
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+    useEffect(() => {
+        getAllTodos();
+    }, []);
+    return(
+        <VerticalTimeline>
+                To Do List
+                
 
-
-  return (
-    <div>
-      <h1 className="title">Daily Schedule</h1>
-      <VerticalTimeline>
-        {timelineElements.map((element) => {
-          let isWorkIcon = element.icon === "work";
-          let showButton =
-            element.buttonText !== undefined &&
-            element.buttonText !== null &&
-            element.buttonText !== "";
-
-          return (
-            <VerticalTimelineElement
-              key={element.key}
-              date={element.date}
-              dateClassName="date"
-              iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
-              icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                {element.title}
-              </h3>
-              <h5 className="vertical-timeline-element-subtitle">
-                {element.location}
-              </h5>
-              <p id="description">{element.description}</p>
-              {showButton && (
-                <a
-                  className={`button ${
-                    isWorkIcon ? "workButton" : "schoolButton"
-                  }`}
-                  href="/"
-                >
-                  {element.buttonText}
-                </a>
-              )}
-            </VerticalTimelineElement>
-          );
-        })}
-      </VerticalTimeline>
-    </div>
-  );
-}
-
-export default Timeline;
+                {todos.map(todo => (
+                    <VerticalTimelineElement>
+                    <li key={todo.todo_id}>
+                        {todo.description}
+                        {todo.date}
+                        
+                    </li>
+                     </VerticalTimelineElement>
+                ))}
+           
+        </VerticalTimeline>
+    );
+};
+export default ListTodo;
