@@ -11,7 +11,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 function Timeline() {
-  let workIconStyles = { background: "#cfdac8" };
+  let workIconStyles = { background: "#d2f6c5" };
   let schoolIconStyles = { background: "#f9c74f" };
 
   return (
