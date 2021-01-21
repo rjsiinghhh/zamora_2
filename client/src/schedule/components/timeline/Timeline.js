@@ -1,22 +1,24 @@
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
 import { ReactComponent as WorkIcon } from "./work.svg";
 import { ReactComponent as SchoolIcon } from "./school.svg";
-
 import timelineElements from "./timelineElements";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-
 import "react-vertical-timeline-component/style.min.css";
+
 
 function Timeline() {
   let workIconStyles = { background: "#d2f6c5" };
   let schoolIconStyles = { background: "#f9c74f" };
 
+
+
   return (
     <div>
-      <h1 className="title">Timeline</h1>
+      <h1 className="title">Daily Schedule</h1>
       <VerticalTimeline>
         {timelineElements.map((element) => {
           let isWorkIcon = element.icon === "work";

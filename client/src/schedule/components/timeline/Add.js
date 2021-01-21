@@ -32,7 +32,6 @@ const AddSchedule = () => {
     return(
         <Card>
         <Fragment>
-            <h2> Daily Schedule</h2>
         <Form>
             
 
