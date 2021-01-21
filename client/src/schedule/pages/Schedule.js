@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './Schedule.css';
-import AddtoTimeline from '../components/timeline/AddtoTimeline'
+import Add from '../components/timeline/Add'
 import Timeline from '../components/timeline/Timeline'
 
 const Schedule = props => {
@@ -8,7 +8,7 @@ const Schedule = props => {
         <>
         <Fragment>
         
-        <AddtoTimeline />
+        <Add />
         <Timeline />
         </Fragment>
        
