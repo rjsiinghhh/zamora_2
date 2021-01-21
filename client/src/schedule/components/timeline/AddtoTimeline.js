@@ -16,7 +16,7 @@ const AddSchedule = () => {
     const createNewTodo = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/todos", 
+            await axios.post("http://localhost:5000/schedule", 
             {
                 date: date,
                 description: description

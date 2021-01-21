@@ -1,10 +1,10 @@
 import React, { useState }  from 'react';
 import { render } from 'react-dom';
 import Calendar from 'react-calendar';
-import Card from '../../components/UIElements/Card';
+import Card from '../../../components/UIElements/Card';
 import './Calendar.css'
-import Button from '../../components/FormElements/Button'
-import Modal from '../../components/UIElements/Modal';
+import Button from '../../../components/FormElements/Button'
+import Modal from '../../../components/UIElements/Modal';
 import '../../places/components/PlaceList.css';
 
 
