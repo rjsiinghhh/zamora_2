@@ -80,6 +80,99 @@ app.get("/schedule", async (req, res) => {
       console.log(err.message);
     }
   });
+
+  
+  // __________________________________________________________
+  
+  
+  // expenses routes
+
+
+  // post expense
+  app.post("/expenses", async (req, res) => {
+    try {
+        const { date } = req.body;
+        const { price } = req.body;
+        const { category } = req.body;
+        const newExpense = await pool.query(
+            "INSERT INTO expenses (date, price, category) VALUES($1, $2, $3) RETURNING *",
+            [date, price, category]
+        );
+        res.json(newExpense.rows[0]);
+    } catch (err) {
+        console.error(err.message);
+    }
+})
+
+
+// get the expenses
+
+app.get("/expenses", async (req, res) => {
+  try {
+    const allExpenses = await pool.query("SELECT * FROM expenses");
+    res.json(allExpenses.rows);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+
+// get a specific expense
+
+
+app.get("/expenses/:id", async(req, res) => {
+  try {
+      const { id } = req.params;
+      const expense = await pool.query("SELECT * FROM expenses WHERE ex_id = $1" , [
+          id
+    ]);
+    res.json(expense.rows[0]);
+  } catch (err) {
+      console.error(err.message);
+  }
+});
+
+
+// update an expense
+
+app.put("/expenses/:id", async (req, res) => {
+  try {
+      const { id } = req.params;
+      const { price } = req.params;
+      const { category } = req.params;
+      const updateExpense = await pool.query(
+          "UPDATE expense SET price = $1 WHERE ex_id = $2",
+          [price, id],
+      );
+      res.json("Fixed!")
+  } catch (err) {
+      console.error(err.message);
+  }
+});
+
+
+// delete an expense
+
+app.delete("/expenses/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleteExpense = await pool.query("DELETE FROM expense WHERE ex_id = $1", [
+      id
+    ]);
+    res.json("Todo was deleted!");
+  } catch (err) {
+    console.log(err.message);
+  }
+});
+
+
+
+
+
+
+
+
+
   
   app.listen(5000, () => {
     console.log("server has started on port 5000");
