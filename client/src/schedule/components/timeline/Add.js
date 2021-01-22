@@ -36,7 +36,6 @@ const AddSchedule = () => {
         <Fragment>
         <Form>
             <h2>Daily Schedule</h2>
-            
 
             <input type= "text" 
             value={description} 
@@ -48,13 +47,9 @@ const AddSchedule = () => {
             onChange= {e => setDate(e.target.value)}
             />
 
-
-
-
-
              <input type ="checkbox"
             value={icon}
-            onChange= {e => setDate(e.target.value)} 
+            onChange= {e => setIcon(e.target.value)} 
             />
 
 
