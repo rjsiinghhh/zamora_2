@@ -1,5 +1,5 @@
 import React from 'react'
-import { Polar, defaults } from 'react-chartjs-2'
+import { Bar, defaults } from 'react-chartjs-2'
 
 defaults.global.tooltips.enabled = false
 defaults.global.legend.position = 'bottom'
@@ -7,7 +7,7 @@ defaults.global.legend.position = 'bottom'
 const Chart2 = () => {
   return (
     <div>
-      <Polar
+      <Bar
         data={{
           labels: ['Wages', 'Equipment', 'Yellow', 'Green', 'Purple', 'Orange'],
           datasets: [
