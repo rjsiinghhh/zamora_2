@@ -1,13 +1,13 @@
 import React from 'react'
-import { Line, defaults } from 'react-chartjs-2'
+import { Polar, defaults } from 'react-chartjs-2'
 
 defaults.global.tooltips.enabled = false
 defaults.global.legend.position = 'bottom'
 
-const Chart = () => {
+const Chart2 = () => {
   return (
     <div>
-      <Line
+      <Polar
         data={{
           labels: ['Wages', 'Equipment', 'Yellow', 'Green', 'Purple', 'Orange'],
           datasets: [
@@ -32,12 +32,7 @@ const Chart = () => {
               ],
               borderWidth: 1,
             },
-            // {
-            //   label: 'Quantity',
-            //   data: [47, 52, 67, 58, 9, 50],
-            //   backgroundColor: 'orange',
-            //   borderColor: 'red',
-            // },
+
           ],
         }}
         height={400}
@@ -64,4 +59,4 @@ const Chart = () => {
   )
 }
 
-export default Chart;
+export default Chart2;
