@@ -14,9 +14,10 @@ app.post("/schedule", async (req, res) => {
     try {
         const { date } = req.body;
         const { description } = req.body;
+        const { icon } = req.body;
         const newTodo = await pool.query(
-            "INSERT INTO todo (date, description) VALUES($1, $2) RETURNING *",
-            [date, description]
+            "INSERT INTO todo (date, description, icon) VALUES($1, $2, $3) RETURNING *",
+            [date, description, icon]
         );
         res.json(newTodo.rows[0]);
     } catch (err) {
@@ -48,13 +49,14 @@ app.get("/schedule", async (req, res) => {
           console.error(err.message);
       }
   });
-  
+
   // update a todo 
 
   app.put("/schedule/:id", async (req, res) => {
       try {
           const { id } = req.params;
           const { description } = req.params;
+          const { icon } = req.params;
           const updateTodo = await pool.query(
               "UPDATE todo SET description = $1 WHERE todo_id = $2",
               [description, id],

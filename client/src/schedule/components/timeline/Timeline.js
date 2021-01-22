@@ -37,15 +37,13 @@ const ListTodo = () => {
     useEffect(() => {
         getAllTodos();
     }, []);
+    
     return(
         <VerticalTimeline>
-                To Do List
-                
-
                 {todos.map(todo => (
                     <VerticalTimelineElement>
                     <li key={todo.todo_id}>
-                        {todo.description}
+                        {todo.description} <br />
                         {todo.date}
                         
                     </li>

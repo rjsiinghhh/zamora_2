@@ -5,11 +5,12 @@ CREATE DATABASE zamora;
 CREATE TABLE todo(
     todo_id SERIAL PRIMARY KEY,
     date DATE, 
-    description VARCHAR(255)
+    description VARCHAR(255), 
+    icon VARCHAR(10)
 );
 
 
-INSERT INTO todo (date, description) VALUES ('2016-03-02 12:05:00', 'first post, trying to get this date working');
+INSERT INTO todo (date, description, icon) VALUES ('2016-03-02 12:05:00', 'never mind son, i got it', 'work');
 
 
 

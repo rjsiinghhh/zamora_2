@@ -11,6 +11,7 @@ import '../../../components/UIElements/Card.css'
 const AddSchedule = () => {
     const [description, setDescription] = useState("");
     const [date, setDate] = useState("");
+    const [icon, setIcon] = useState("")
 
 
     const createNewTodo = async (e) => {
@@ -19,7 +20,8 @@ const AddSchedule = () => {
             await axios.post("http://localhost:5000/schedule", 
             {
                 date: date,
-                description: description
+                description: description,
+                icon: icon
             })
         } catch (err) {
             console.error(err.message);
@@ -33,6 +35,7 @@ const AddSchedule = () => {
         <Card>
         <Fragment>
         <Form>
+            <h2>Daily Schedule</h2>
             
 
             <input type= "text" 
@@ -44,6 +47,21 @@ const AddSchedule = () => {
             value={date}
             onChange= {e => setDate(e.target.value)}
             />
+
+
+
+
+
+             <input type ="checkbox"
+            value={icon}
+            onChange= {e => setDate(e.target.value)} 
+            />
+
+
+
+
+
+
 
              <Button onClick ={createNewTodo}> Add</Button>
 
