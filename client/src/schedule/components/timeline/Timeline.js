@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { ReactComponent as WorkIcon } from "./work.svg";
-import { ReactComponent as SchoolIcon } from "./school.svg";
-import timelineElements from "./timelineElements";
+// import { ReactComponent as WorkIcon } from "./work.svg";
+// import { ReactComponent as SchoolIcon } from "./school.svg";
 import Icon from './Icon';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import Button from '../../../components/FormElements/Button'
+
+
 
 import './Timeline.css'
 
@@ -45,6 +47,11 @@ const ListTodo = () => {
                     <li key={todo.todo_id}>
                         {todo.description} <br />
                         {todo.date}
+                        <br />
+                        <Button onClick={() => deleteTodo(todo.todo_id)}>
+                            Finished
+                        </Button>
+
                         
                     </li>
                      </VerticalTimelineElement>

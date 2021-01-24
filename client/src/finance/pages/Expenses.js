@@ -1,7 +1,5 @@
 import React from 'react';
 import Chart from '../components/Chart'
-import Chart2 from '../components/Chart2'
-import Chart3 from '../components/Chart3'
 import Card from '../../components/UIElements/Card'
 
 
@@ -11,27 +9,12 @@ const Expenses = props => {
     return(
         <>
 <Card>
-<h1>Expenses</h1>
-<Chart3 />
+    <h1>Expenses</h1>
+    <Chart />
 </Card>
-
-      <Card>
-          <p> dglkndsglkdfmlgdfgllgd;lkgdlfknglkdfgnlld
-            </p>
-        </Card>
-
-     <Card>
-<Chart />
-    </Card>
-    
-         <Card>
-            <p>This chart wil repesrenernsklfnsjfklnslflfnls</p>
-         </Card>
- <Card>
-<h1> sdfsfsfsfdfbdvdf</h1>
-<Chart2 />
+<Card>
+    <p> Here is an expenses table breaking down all it takes to run an orchard.<br/> You have equipemnt, labor wages, electricity, diesel, water, maintanince, monthly repairs, chemicals, mortgages, insurance, and once a year harvest. <br />  </p>
 </Card>
-      
         </>
     )
 }

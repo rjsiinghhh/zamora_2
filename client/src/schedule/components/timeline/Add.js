@@ -4,7 +4,9 @@ import { Form } from 'react-bootstrap';
 import Card from '../../../components/UIElements/Card';
 import Button from '../../../components/FormElements/Button'
 
-import '../../../components/UIElements/Card.css'
+
+import './Add.css'
+// import '../../../components/UIElements/Card.css'
 
 
 
@@ -35,6 +37,7 @@ const AddSchedule = () => {
         <Card>
         <Fragment>
         <Form>
+                
             <h2>Daily Schedule</h2>
 
             <input type= "text" 
@@ -47,17 +50,7 @@ const AddSchedule = () => {
             onChange= {e => setDate(e.target.value)}
             />
 
-             <input type ="checkbox"
-            value={icon}
-            onChange= {e => setIcon(e.target.value)} 
-            />
-
-
-
-
-
-
-
+            
              <Button onClick ={createNewTodo}> Add</Button>
 
 

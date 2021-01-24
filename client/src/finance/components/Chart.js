@@ -9,11 +9,11 @@ const Chart = () => {
     <div>
       <Line
         data={{
-          labels: ['Wages', 'Equipment', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
           datasets: [
             {
-              label: '# of votes',
-              data: [12, 19, 3, 5, 2, 3],
+              label: '1,000 Dollars',
+              data: [12, 19, 3, 5, 2, 3, 10, 14, 17, 12, 13, 9, 3, ],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
