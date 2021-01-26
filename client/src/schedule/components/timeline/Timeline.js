@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import { ReactComponent as WorkIcon } from "./work.svg";
 // import { ReactComponent as SchoolIcon } from "./school.svg";
-import Icon from './Icon';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -15,8 +14,6 @@ import Button from '../../../components/FormElements/Button'
 import './Timeline.css'
 
 const ListTodo = () => {
-    let workIconStyles = { background: "#d2f6c5" };
-    let schoolIconStyles = { background: "#f9c74f" };
 
     const [todos, setTodos] = useState([]);
     const getAllTodos = async () => {
@@ -46,7 +43,7 @@ const ListTodo = () => {
                     <VerticalTimelineElement>
                     <li key={todo.todo_id}>
                         {todo.description} <br />
-                        {todo.date}
+                        {todo.date.split('').splice(0,10).join('')}
                         <br />
                         <Button onClick={() => deleteTodo(todo.todo_id)}>
                             Finished
