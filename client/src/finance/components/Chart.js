@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
 import { Line, defaults } from 'react-chartjs-2'
 
@@ -15,16 +15,25 @@ defaults.global.legend.position = 'bottom'
 
 const Chart = () => {
 
-
+    const [data, setData] = useState([]);
+    const getAllData = async() => {
+        try {
+            const response = await axios.get("http://localhost:5000/expenses");
+            const data = response.data;
+            setData(data);
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
 
 
     return ( < div >
         <
         Line data = {
             {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                dates: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
                 datasets: [{
-                        label: '1,000 Dollars',
+                        date: '1,000 Dollars',
                         data: [12, 19, 3, 5, 2, 3, 10, 14, 17, 12, 13, 9, 3, ],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -66,7 +75,7 @@ const Chart = () => {
                     }, ],
                 },
                 legend: {
-                    labels: {
+                    dates: {
                         fontSize: 25,
                     },
                 },
