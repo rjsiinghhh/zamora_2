@@ -58,8 +58,8 @@ const AddSchedule = () => {
 
 
         <
-        /Form>  <
-        /Fragment>  <
+        /Form>  < /
+        Fragment > <
         /Card>
     )
 };

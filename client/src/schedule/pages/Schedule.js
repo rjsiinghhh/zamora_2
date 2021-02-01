@@ -4,15 +4,19 @@ import Add from '../components/timeline/Add'
 import Timeline from '../components/timeline/Timeline'
 
 const Schedule = props => {
-    return(
-        <>
-        <Fragment>
-        
-        <Add />
-        <Timeline />
-        </Fragment>
-       
-        </>
+    return ( < >
+        <
+        Fragment >
+
+        <
+        Add / >
+        <
+        Timeline / >
+        <
+        /Fragment>
+
+        <
+        />
     )
 }
 

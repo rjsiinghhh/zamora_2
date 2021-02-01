@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios';
 import { Line, defaults } from 'react-chartjs-2'
 
 defaults.global.tooltips.enabled = false
@@ -6,13 +7,17 @@ defaults.global.legend.position = 'bottom'
 
 
 
-
+// axios call for get
 
 
 
 
 
 const Chart = () => {
+
+
+
+
     return ( < div >
         <
         Line data = {
@@ -67,8 +72,8 @@ const Chart = () => {
                 },
             }
         }
-        />  <
-        /div >
+        />  < /
+        div >
     )
 }
 
