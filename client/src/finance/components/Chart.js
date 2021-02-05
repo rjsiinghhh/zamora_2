@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import axios from 'axios';
+import React from 'react'
+// import axios from 'axios';
 import { Line, defaults } from 'react-chartjs-2'
 
 defaults.global.tooltips.enabled = false
@@ -15,16 +15,16 @@ defaults.global.legend.position = 'bottom'
 
 const Chart = () => {
 
-    const [data, setData] = useState([]);
-    const getAllData = async() => {
-        try {
-            const response = await axios.get("http://localhost:5000/expenses");
-            const data = response.data;
-            setData(data);
-        } catch (err) {
-            console.error(err.message);
-        }
-    }
+    // const [data, setData] = useState([]);
+    // const getAllData = async() => {
+    //     try {
+    //         const response = await axios.get("http://localhost:5000/expenses");
+    //         const data = response.data;
+    //         setData(data);
+    //     } catch (err) {
+    //         console.error(err.message);
+    //     }
+    // }
 
 
     return ( < div >

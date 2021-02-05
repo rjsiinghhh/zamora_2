@@ -37,8 +37,7 @@ const ListTodo = () => {
 
     return ( <
         VerticalTimeline > {
-            todos.map(todo => ( <
-                VerticalTimelineElement >
+            todos.map(todo => ( < VerticalTimelineElement >
                 <
                 li key = { todo.todo_id } > { todo.description } < br / > { todo.date.split('').splice(0, 10).join('') } <
                 br / >
@@ -51,8 +50,8 @@ const ListTodo = () => {
 
 
                 <
-                /li>  <
-                /VerticalTimelineElement >
+                /li>  < /
+                VerticalTimelineElement >
             ))
         }
 
