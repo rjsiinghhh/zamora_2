@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch
+    BrowserRouter as Router,
+    Route,
+    Redirect,
+    Switch
 } from 'react-router-dom';
 
 import Users from './user/pages/Users';
@@ -13,29 +13,45 @@ import Expenses from './finance/pages/Expenses'
 import Schedule from './schedule/pages/Schedule'
 
 const App = () => {
-  return (
-    <Router>
-      <MainNavigation />
-      <main>
-        <Switch>
-          <Route path="/" exact>
-            <Users />
-          </Route>
-          <Route path="/:userId/places" exact>
-            <UserPlaces />
-          </Route>
-          <Route path="/expenses" exact>
-            <Expenses />
-          </Route>
-          <Route path="/schedule" exact>
-            <Schedule />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
-      </main>
-    </Router>
-  );
+    return ( <
+        Router >
+        <
+        MainNavigation / >
+        <
+        main >
+        <
+        Switch >
+        <
+        Route path = "/"
+        exact >
+        <
+        Users / >
+        <
+        /Route> <
+        Route path = "/:userId/places"
+        exact >
+        <
+        UserPlaces / >
+        <
+        /Route> <
+        Route path = "/expenses"
+        exact >
+        <
+        Expenses / >
+        <
+        /Route> <
+        Route path = "/schedule"
+        exact >
+        <
+        Schedule / >
+        <
+        /Route> <
+        Redirect to = "/" / >
+        <
+        /Switch> <
+        /main> <
+        /Router>
+    );
 };
 
 export default App;
-
